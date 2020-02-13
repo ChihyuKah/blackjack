@@ -4,6 +4,7 @@ ini_set('display_errors', "1");
 ini_set('display_startup_errors', "1");
 error_reporting(E_ALL);
 
+session_start();
 require "blackjack.php";
 
 function whatIsHappening() {
@@ -13,8 +14,8 @@ function whatIsHappening() {
     var_dump($_POST);
     echo '<h2>$_COOKIE</h2>';
     var_dump($_COOKIE);
-//    echo '<h2>$_SESSION</h2>';
-//    var_dump($_SESSION);
+    echo '<h2>$_SESSION</h2>';
+    var_dump($_SESSION);
 }
 
 whatIsHappening();
@@ -30,9 +31,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($_POST["hit"] == 1) {
 
 
-        echo $player->newCard()."<br>";
-        echo $player1->newCard()."<br>";
+        array_push($totalPlayerAmount,$player->newCard(),$player1->newCard1());
 
+        echo $player->newCard()."<br>";
+        echo $player1->newCard1()."<br>";
+        echo implode($totalPlayerAmount)."<br>";
     }
 }
 //echo $player->newCard();

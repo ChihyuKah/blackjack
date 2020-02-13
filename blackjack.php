@@ -36,8 +36,8 @@ class blackjack {
 
     }
 
-    public  function storeSes(){
-
+    public function newCard1(){
+        return rand(1,11);
     }
 }
 
