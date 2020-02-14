@@ -35,7 +35,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         echo $player->newCard()."<br>";
         echo $player1->newCard1()."<br>";
-        echo implode($totalPlayerAmount)."<br>";
+        //echo implode($totalPlayerAmount)."<br>";
     }
 }
 //echo $player->newCard();
