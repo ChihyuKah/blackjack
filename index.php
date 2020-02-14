@@ -16,9 +16,10 @@ require "game.php";
 <body>
         <form  method="post">
             <button type="submit" name="refresh" class="btn btn-primary">refresh page!</button>
-            <button type="submit" name="hit" value="1" class="btn btn-primary">Hit!</button>
-            <button type="submit" name="stand" value="2" class="btn btn-primary">Stand!</button>
-            <button type="submit" name="surrender" value="3" class="btn btn-primary">SURRENDER!</button>
+            <button type="submit" name="startgame" value="1" class="btn btn-primary">Start Game!</button>
+            <button type="submit" name="hit" value="2" class="btn btn-primary">Hit!</button>
+            <button type="submit" name="stand" value="3" class="btn btn-primary">Stand!</button>
+            <button type="submit" name="surrender" value="4" class="btn btn-primary">SURRENDER!</button>
         </form>
 </body>
 </html>

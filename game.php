@@ -22,27 +22,30 @@ whatIsHappening();
 $totalPlayerAmount=[];
 
 $player = new blackjack();
-$player1 = new blackjack();
+
 
 $dealer = new blackjack();
 
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    if (isset($_POST["startgame"])) {
 
-    if ($_POST["hit"] == 1) {
+        $player->startTheGame();
+    }
+
+    if (isset($_POST["hit"])) {
+
+        $player->hit();
 
 
-        array_push($totalPlayerAmount,$player->newCard(),$player1->newCard1());
-
-        echo $player->newCard()."<br>";
-        echo $player1->newCard1()."<br>";
-        //echo implode($totalPlayerAmount)."<br>";
     }
 }
-//echo $player->newCard();
+//echo ("test").$player->newCard1();
 
 
 //refresh page button
 if (isset($_POST["refresh"])) {
     header("refresh");
+    session_destroy();
 }
 
